@@ -1,0 +1,10 @@
+<h1>My Firends</h1>
+Search: <input type="text" ng-model="searchFriend">
+<br>
+<ul>
+  <li ng-repeat="friend in friends | filter:searchFriend">
+   <b>Nom:</b> <span>{{friend.nom}}</span> <b>Role:</b> <span>{{friend.role}}</span>
+   <b>Credits:</b> <span>{{friend.credit | currency}}</span>
+   <a href="#/friends/{{friend.id}}" ng-click="getProfile(friend)"> View Profile</a>
+  </li>
+</ul>
